@@ -22,6 +22,9 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
+  // globalSetup: require.resolve("./utils/global-setup"),
+
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: "https://www.saucedemo.com/",

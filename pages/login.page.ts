@@ -15,17 +15,11 @@ class LoginPage {
     this.msgError = page.locator("[data-test=error]");
   }
 
-  async goToLoginPage(): Promise<void> {
+  async goToLoginPage() {
     await this.page.goto("/");
   }
 
-  async login({
-    username,
-    password,
-  }: {
-    username: string;
-    password: string;
-  }): Promise<void> {
+  async login(username: string, password: string) {
     await this.txtLogin.fill(username);
     await this.txtPassword.fill(password);
     await this.btnLogin.click();
